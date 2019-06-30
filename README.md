@@ -28,13 +28,16 @@ To classify the divided attention in 3 category namely Low, Average and High div
 - Again we will do the statistical analysis but now for the combined cognitive task comprising of all the three tasks. The statistical parameters for this combined task are (μ, σ).
 - Then, check for the consistency of the subject's performance in the combined cognitive task with the help of the performance of his individual tasks. By doing so all the inconsistent or irrelevant records(due to fatigue, boredom or habituation) will be filtered out.
 - Then, categorize each record of the dataset in three classes of Divided Attention as follows :
-1 High Divided Attention (results are above μ + σ)
-2 Average Divided Attention (results are between μ
-3 Low Divided Attention (result are below μ - σ)
+1. High Divided Attention (results are above μ + σ)
+2. Average Divided Attention (results are between μ
+3. Low Divided Attention (result are below μ - σ)
 Scatter plot of Task-1, Task-2 and task-3 are shown in Figure 3d.png, in which green bubble represent High attention score, red dot represent Average attention score, whereas blue bubble represent Low attention score.
+
 Target Value Z (in DAttention.csv) is divided into 3 class namely -1, 0, 1 where,
 - -1 corresponds to Low Divided Attention.
 - 0 corresponds to Average Divided Attention.
 - 1 corresponds to High Divided Attention.
 
 ### Classification of Divided Attention
+I have applied Naive Bayes classifier, Support Vector Machine (SVM) and Random Forest Classifier to classify the dataset.
+Also, studied the trends  in academic performance(trends.png). This analysis examines the association between student's divided attention performance and their academic functioning which tells whether a subject having high, low or average divided attention performs well or poorly in his academics.
