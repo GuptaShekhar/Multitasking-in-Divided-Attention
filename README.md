@@ -15,12 +15,26 @@ To measure divided attention,I attempt to formalize a method for analyzing one g
 In this test, given a randomly generated stimuli which keeps on changing and one to respond for the target stimuli. With help of this GUI, I have collected the data from several people.
 
 In this work we have developed three distinct task which will have spatial identification test, color and number test (1.png), which will monitor the attention level by using visual effect and multi-tasking. 
-###### Task 1
-we try to measure the attention level of a user related to spatial movement of stimuli(2.png).
-A user has to press the specified key at instant, the target stimuli occur. In this test, there is predefined input which will keeps on changing randomly at the time interval of 750 milliseconds. This whole process of test occur in order i.e., firstly angle determination test is done (task 1), then color selection test (task 2) and then number selection test (task 3) (Figure 3.1). Each test is of 3 seconds and this is repeated 20 times. If a user is unable to respond within that 6 seconds, either he missed it or unable to act, it will be considered as wrong outcome. If user is fast and smart enough to act decisively and press right key for that target stimuli, answer is recorded as true, otherwise false value is stored in database.
+
 #### Proposed Algorithm
 To classify the divided attention in 3 category namely Low, Average and High divided attention, we have applied the following steps after collecting the data:
 - Remove the inconsistent data from dataset.
 - Label the data based on the mean and standard deviation of the attention score.
 - Apply machine learning model to classify the attention type (Low, Average, High).
 - Analyze the output and trends in academic performance and divided attention.
+
+##### Labelling the dataset
+- I have done the statistical analysis individually for each of the three cognitive tasks. I am using mean(μ) and standard deviation(σ) in order to differentiate between the three classes(high, average, low).
+- Again we will do the statistical analysis but now for the combined cognitive task comprising of all the three tasks. The statistical parameters for this combined task are (μ, σ).
+- Then, check for the consistency of the subject's performance in the combined cognitive task with the help of the performance of his individual tasks. By doing so all the inconsistent or irrelevant records(due to fatigue, boredom or habituation) will be filtered out.
+- Then, categorize each record of the dataset in three classes of Divided Attention as follows :
+1 High Divided Attention (results are above μ + σ)
+2 Average Divided Attention (results are between μ
+3 Low Divided Attention (result are below μ - σ)
+Scatter plot of Task-1, Task-2 and task-3 are shown in Figure 3d.png, in which green bubble represent High attention score, red dot represent Average attention score, whereas blue bubble represent Low attention score.
+Target Value Z (in DAttention.csv) is divided into 3 class namely -1, 0, 1 where,
+- -1 corresponds to Low Divided Attention.
+- 0 corresponds to Average Divided Attention.
+- 1 corresponds to High Divided Attention.
+
+### Classification of Divided Attention
